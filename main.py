@@ -6,8 +6,9 @@ from array_de_5000 import vet as vet_5000
 from array_de_20000 import vet as vet_20000
 from array_de_100000 import vet as vet_100000
     
-M = 100000  # quantidade de arrays
-vet = vet_100000 #array a ser buscado
+M = 1000  # quantidade de arrays
+vet = vet_5000 #array a ser buscado
+
 print(f'Modular: {M}')
 print(f'Número de registros: {len(vet)}')
 
