@@ -1,30 +1,37 @@
-# hash_map
+# Hash Map
 
-Para a execução do projeto, é recomendado que utilize um valor modular compatível com o número de registros.
-Com finalidade de gerar testes mais precisos, foi inserido na aplicação três arquivos populados aleatoriamente com arrays de tamanho relativo ao seu nome, sendo eles:
-- array_de_5000
-- array_de_20000
-- array_de_100000
+Para a execução deste projeto, é recomendado que você utilize um valor modular compatível com o número de registros. Com o objetivo de gerar testes mais precisos, foram inseridos na aplicação três arquivos populados aleatoriamente com arrays de tamanho relativo ao seu nome, sendo eles:
 
-- Para ambas a execuções é necessário primeiro instalar as dependência da aplicação.
+- `array_de_5000`
+- `array_de_20000`
+- `array_de_100000`
 
-<img src="/src/documentation/params_operation.png">
+## Pré-requisitos
 
-Execução:
+Antes de executar a aplicação, certifique-se de que todas as dependências estão instaladas.
 
-#Passo 1: Popular um valor modular na variável "M".
-#Passo 2: Popular o array "vet" com o array a ser hasheado.
-#Passo 3: Rodar a aplicação.
+![Instalação de Dependências](/src/documentation/params_operation.png)
 
-Execução em um array aleatório ou diferente do disposto nos arquivos da aplicação:
+## Execução
 
-<img src="/src/documentation/random_list.png">
+Siga os seguintes passos para executar a aplicação:
 
-#Passo 1: Descomentar o bloco de código acima mostrado.
-#Passo 2: Rodar a aplicação.
+### Passo 1: Definir um valor modular na variável "M".
 
+### Passo 2: Popular o array "vet" com o array a ser hasheado.
 
-Exemplo de resultado esperado de execução:
-<img src="/src/documentation/log_result.png">
+### Passo 3: Execute a aplicação.
 
+Para executar a aplicação com um array aleatório ou diferente dos arquivos da aplicação:
 
+![Execução com Array Aleatório](/src/documentation/random_list.png)
+
+### Passo 1: Descomente o bloco de código acima mostrado.
+
+### Passo 2: Execute a aplicação.
+
+## Exemplo de Resultado Esperado de Execução
+
+Aqui está um exemplo de resultado esperado de execução:
+
+![Log de Resultado](/src/documentation/log_result.png)
