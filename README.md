@@ -12,16 +12,16 @@ Com finalidade de gerar testes mais precisos, foi inserido na aplicação três 
 
 Execução:
 
-Passo 1: Popular um valor modular na variável "M".
-Passo 2: Popular o array "vet" com o array a ser hasheado.
-Passo 3: Rodar a aplicação.
+#Passo 1: Popular um valor modular na variável "M".
+#Passo 2: Popular o array "vet" com o array a ser hasheado.
+#Passo 3: Rodar a aplicação.
 
 Execução em um array aleatório ou diferente do disposto nos arquivos da aplicação:
 
 <img src="/src/documentation/random_list.png">
 
-Passo 1: Descomentar o bloco de código acima mostrado.
-Passo 2: Rodar a aplicação.
+#Passo 1: Descomentar o bloco de código acima mostrado.
+#Passo 2: Rodar a aplicação.
 
 
 Exemplo de resultado esperado de execução:
