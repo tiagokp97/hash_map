@@ -53,7 +53,7 @@ searches = [busca_elem(hash_tab, ids_to_search) for _ in range(searche_calls)]
 times = [search[1] for search in searches]
 
 mean_searches_time = statistics.mean(times)
-print(f'Média de tempo de busca {mean_searches_time}')
+print(f'Média de tempo de busca {mean_searches_time}(ms)')
 
 
 sizes = []
