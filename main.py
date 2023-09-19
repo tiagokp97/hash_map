@@ -1,4 +1,3 @@
-import numpy as np
 import time
 import statistics
 import random
@@ -16,19 +15,27 @@ def hash_mod(data, M):
     key = data['id'] % M
     return key
 
-def busca_elem(hash_tab, id_to_find):
+def busca_elem(hash_tab, ids_to_find):
+    resultados = []
     inicio = time.time()
-    for key, lista in enumerate(hash_tab):
-        for i, elem in enumerate(lista):
-            if elem['id'] == id_to_find:
-                fim = time.time()
-                tempo_formatado_ms = (fim - inicio) * 1000
-                print('Tempo de execução (ms):', tempo_formatado_ms)
-                return key, i
+    
+    for id_to_find in ids_to_find:
+        encontrado = False
+        for key, lista in enumerate(hash_tab):
+            for i, elem in enumerate(lista):
+                if elem['id'] == id_to_find:
+                    resultados.append((id_to_find, key, i))
+                    encontrado = True
+                    break
+            if encontrado:
+                break
+        else:
+            resultados.append((id_to_find, -1, -1))
+
     fim = time.time()
     tempo_formatado_ms = (fim - inicio) * 1000
-    print('Tempo de execução (ms):', tempo_formatado_ms)    
-    return -1, -1
+    print(f'Tempo necessário para buscar 100 números, {tempo_formatado_ms}(ms):')    
+    return resultados, tempo_formatado_ms
 
 hash_tab = [[] for _ in range(M)]
 
@@ -36,16 +43,18 @@ for val in vet:
     hash_index = hash_mod(val, M)
     hash_tab[hash_index].append(val)
 
-#Define um elemento aleatório do array para buscar
-random = random.choice(vet) 
-# Buscando um elemento pelo ID
-id_to_search = random['id']
-index = busca_elem(hash_tab, id_to_search)
+#Define diversos elementos aleatórios do do array para buscar
+ids_to_search = [random.choice(vet)['id'] for _ in range(100)]
 
-if index != -1:
-    print("Elemento encontrado na posição:", index)
-else:
-    print("Elemento não encontrado.")
+# Buscando múltiplos elementos pelos IDs
+searche_calls = 5
+
+searches = [busca_elem(hash_tab, ids_to_search) for _ in range(searche_calls)]
+times = [search[1] for search in searches]
+
+mean_searches_time = statistics.mean(times)
+print(f'Média de tempo de busca {mean_searches_time}')
+
 
 sizes = []
 for key in range(M):
